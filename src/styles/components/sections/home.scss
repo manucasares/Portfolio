@@ -1,0 +1,24 @@
+
+.home__screen {
+    background: url('../../../assets/backgrounds/background-home.jpg') no-repeat center center / cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .text {
+        float: right;
+        margin-left: auto;
+        color: $blanco;
+        font-size: 1.3rem;
+
+        .name {
+            font-family: 'Neucha', cursive;
+            text-align: center;
+        }
+        
+        .occupation {
+            font-family: 'Oswald', sans-serif;
+            text-align: center;
+        }
+    }
+}

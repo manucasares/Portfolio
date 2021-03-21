@@ -1,0 +1,44 @@
+.skills__screen {
+    background: url('../../../assets/backgrounds/background-violeta.jpg') no-repeat center center / cover;
+    position: relative;
+
+    .dark__background{
+        position: absolute;
+        bottom: 5%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+        height: 75%;
+        background-color: rgba($color: #515151, $alpha: .45);
+        border-radius: 20px;
+ 
+        .good__experience,
+        .little__experience {
+            .icons__container {
+
+                display: grid;
+                justify-content: center;
+                justify-items: center;
+                align-items: center;
+                margin: 0 auto;
+
+                .icon {
+                    justify-content: center;
+                    align-items: center;
+                    width: 80px;
+                    margin: 10px 0;
+                }
+            }
+
+            .good__experience__icons__container {
+                grid-template-columns: repeat( 5, 1fr );
+            }
+
+            .little__experience__icons__container {
+                grid-template-columns: repeat( 3, 1fr );
+                width: 60%;
+            }
+
+        }
+    }
+}
