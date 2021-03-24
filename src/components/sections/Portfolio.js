@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { Title } from '../Title';
+import { DesktopPortfolio } from './DesktopPortfolio';
 
 
 export const Portfolio = () => {
@@ -11,6 +12,8 @@ export const Portfolio = () => {
                 text="Portfolio"
                 color="#161616"
             />
+
+            <DesktopPortfolio />
 
             
 
