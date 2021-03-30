@@ -6,62 +6,63 @@ import kitchenInventoryImg from '../../assets/proyects_images/KitchenInventory.p
 import laMilongaImg from '../../assets/proyects_images/LaMilonga.png';
 import lofiImg from '../../assets/proyects_images/NonexistingProyect.png';
 
+import { proyects } from '../../data/proyects';
 
-export const PortfolioSlider = () => {
+
+export const PortfolioSlider = ( { setProyectSelected } ) => {
+
+    const images = [ chessImg, estrategaImg, kitchenInventoryImg, laMilongaImg, lofiImg ];
+
 
     useEffect(() => {
-            // 
-        document.querySelector( '.portfolio__slider #s3' ).click();
+        document.querySelector( '.portfolio__slider #p2' ).click();
     }, [])
 
+
     const handleOnchange = ( e ) => ( e.target.checked );
+
+
+    const handleClick = ( id ) => {
+        const proyectClicked = proyects.find( proyect => proyect.id === id );
+        setProyectSelected( proyectClicked );
+    }
+
 
     return (
         <div className="portfolio__slider">
 
-            <input type="radio" name="slider" id="s1" onChange={ handleOnchange } />
-            <input type="radio" name="slider" id="s2" onChange={ handleOnchange } />
-            <input type="radio" name="slider" id="s3" onChange={ handleOnchange } />
-            <input type="radio" name="slider" id="s4" onChange={ handleOnchange } />
-            <input type="radio" name="slider" id="s5" onChange={ handleOnchange } />
+            {
+                proyects.map( ( { id }, i ) => (
 
-            <label id="slide1" htmlFor="s1">
-                <img
-                    src={ chessImg }
-                    alt="chess game"
-                />
-            </label>
+                    <input
+                        key={ id }
+                        type="radio"
+                        name="slider"
+                        id={ `p${ i }` }
+                        onChange={ handleOnchange } 
+                        onClick={ ( e ) => handleClick( id ) }
+                    />
+                ) )
+            }
 
-            <label id="slide2" htmlFor="s2">
-                <img
-                    src={ estrategaImg }
-                    alt="estratega anotado"
-                />
-            </label>
+            {
+                proyects.map( ( { name, id }, i ) => (
 
-            <label id="slide3" htmlFor="s3">
-                <img
-                    src={ kitchenInventoryImg }
-                    alt="kitchen inventory"
-                />
-            </label>
-
-            <label id="slide4" htmlFor="s4">
-                <img
-                    src={ laMilongaImg }
-                    alt="la milonga argentina"
-                />
-            </label>
-
-            <label id="slide5" htmlFor="s5">
-                <img
-                    src={ lofiImg }
-                    alt="proyecto sin nombre"
-                />
-            </label>
+                    <label
+                        key={ id }
+                        id={ `slide${ i }` }
+                        htmlFor={ `p${ i }` }
+                    >
+                        <img
+                            src={ images[ i ] }
+                            alt={ name }
+                        />
+                    </label>
+                    
+                ) )
+            }
             
         </div>
-
 
     )
 }

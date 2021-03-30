@@ -5,6 +5,8 @@ import { DesktopPortfolio } from './DesktopPortfolio';
 
 
 export const Portfolio = () => {
+
+
     return (
         <div className="section portfolio__screen">
            
@@ -14,9 +16,6 @@ export const Portfolio = () => {
             />
 
             <DesktopPortfolio />
-
-            
-
 
         </div>
     )

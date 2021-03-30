@@ -2,19 +2,26 @@ import React from 'react'
 
 export const Home = () => {
     return (
-        <div className="section home__screen">
-            
-            <div className="container">
+        <header className="section home__screen">
 
-                <div className="text">
+            <div className="text-container">
 
-                    <h2 className="name"> Manuel Casares Rojas </h2>
-                    <h2 className="occupation"> Frontend developer </h2>
+                <h1 className="name"> Manuel Casares Rojas </h1>
+
+                <h2 className="occupation"> Front End Web Developer </h2>
+
+                <p className="description"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam, quae. </p>
+                
+                <div className="social">
+
+                    <i className="fab fa-github-square"></i>
+
+                    <i className="fab fa-linkedin"></i>
 
                 </div>
-
+             
             </div>
-
-        </div>
+            
+        </header>
     )
 }
