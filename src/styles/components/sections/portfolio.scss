@@ -1,7 +1,7 @@
 
 
 .portfolio__screen {
-    background-color: $blanco;
+    background-color: $white;
     position: relative;
 }
 
@@ -18,12 +18,12 @@
 
     // ======================= 3D SLIDER  ======================= //
     .portfolio__slider {
-        width: 65%;
-        height: 30vw;
+        width: 55%;
+        height: 15vw;
         position: relative;
         perspective: 1000px;
         transform-style: preserve-3d;
-
+        
         [type=radio] {
             display: none;
         }
@@ -33,7 +33,7 @@
             left: 0;
             right: 0;
             margin: auto;
-            width: 75%;
+            width: 50%;
             height: 100%;
             border-radius: 4px;
             cursor: pointer;
@@ -45,42 +45,45 @@
                 height: 100%;
             }
 
-        }    
+        }     
     }
 
     #p0:checked ~ #slide3, #p1:checked ~ #slide4,
     #p2:checked ~ #slide0, #p3:checked ~ #slide1,
     #p4:checked ~ #slide2 {
         box-shadow: 0 1px 4px 0 rgba(0,0,0,.37);
-        transform: translate3d(-30%,0,-200px);
+        // transform: translate3d(-30%,0,-200px);
+        transform: translate(-50%, 0) translateZ(50px);
     }
 
     #p0:checked ~ #slide4, #p1:checked ~ #slide0,
     #p2:checked ~ #slide1, #p3:checked ~ #slide2,
     #p4:checked ~ #slide3 {
         box-shadow: 0 6px 10px 0 rgba(0,0,0,.3), 0 2px 2px 0 rgba(0,0,0,.2);
-        transform: translate3d(-15%,0,-100px);
+        // transform: translate3d(-15%,0,-100px);
+        transform: translate(-25%, 0) translateZ(175px);
     }
 
     #p0:checked ~ #slide0, #p1:checked ~ #slide1,
     #p2:checked ~ #slide2, #p3:checked ~ #slide3,
     #p4:checked ~ #slide4 {
         box-shadow: 0 13px 25px 0 rgba(0,0,0,.3), 0 11px 7px 0 rgba(0,0,0,.19);
-        transform: translate3d(0,0,0);
+        // transform: translate3d(0,0,0);
+        transform: translate(0, 0) translateZ(300px);
     }
 
     #p0:checked ~ #slide1, #p1:checked ~ #slide2,
     #p2:checked ~ #slide3, #p3:checked ~ #slide4,
     #p4:checked ~ #slide0 {
         box-shadow: 0 6px 10px 0 rgba(0,0,0,.3), 0 2px 2px 0 rgba(0,0,0,.2);
-        transform: translate3d(15%,0,-100px);
+        transform: translate(25%, 0) translateZ(175px);
     }
 
     #p0:checked ~ #slide2, #p1:checked ~ #slide3,
     #p2:checked ~ #slide4, #p3:checked ~ #slide0,
     #p4:checked ~ #slide1 {
         box-shadow: 0 1px 4px 0 rgba(0,0,0,.37);
-        transform: translate3d(30%,0,-200px);
+        transform: translate(50%, 0) translateZ(50px);
     }
 
 
@@ -107,6 +110,7 @@
             font-weight: 400;
             font-size: 2rem;
             text-transform: capitalize;
+            color: $main-dark;
         }
 
         .btns__container {
@@ -126,6 +130,7 @@
                 margin: 0 7px;
                 cursor: pointer;
                 transition: $transition;
+                box-sizing: border-box;
 
                 &:hover {
                     transform: scale(1.05);
@@ -139,10 +144,6 @@
                 align-items: center;
                 background-color: #333;
                 color: white;
-
-                .fa-github {
-                    font-size: 2rem;
-                }
 
                 .fa-github, span {
                     margin: 0 5px;

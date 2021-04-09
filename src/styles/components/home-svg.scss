@@ -1,0 +1,106 @@
+
+
+
+.home_svg_container {
+    width: 60%;
+    margin-left: auto;
+}
+
+#head {
+    animation: head-motion infinite 1.4s ease;
+}
+
+#music-note1 {
+    animation: music-note-motion1 infinite 1.4s ease;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+#music-note2 {
+    animation: music-note-motion2 infinite 1.4s ease;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+#music-note3 {
+    animation: music-note-motion3 infinite 1.4s ease;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+#plant {
+    animation: plant-motion infinite 2s ease;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes plant-motion {
+    0%{
+        transform: rotate(-2deg) ;
+    }
+
+    50%{
+        transform: rotate(2deg) ;
+    }
+
+    100% {
+        transform: rotate(-2deg) ;
+    }
+}
+
+@keyframes music-note-motion1 {
+    0%{
+        transform: rotate(-25deg) translate(0);
+    }
+
+    50%{
+        transform: rotate(25deg) translate(10px, 10px);
+    }
+
+    100% {
+        transform: rotate(-25deg) translate(0);
+    }
+}
+
+@keyframes music-note-motion2 {
+    0%{
+        transform: rotate(25deg) ;
+    }
+
+    50%{
+        transform: rotate(-25deg) ;
+    }
+
+    100% {
+        transform: rotate(25deg) ;
+    }
+}
+
+@keyframes music-note-motion3 {
+    0%{
+        transform: rotate(25deg) translate(0);
+    }
+
+    50%{
+        transform: rotate(-25deg) translate(10px, 20px) ;
+    }
+
+    100% {
+        transform: rotate(25deg) translate(0);
+    }
+}
+
+@keyframes head-motion {
+
+    0%{
+        transform: translateY(0);
+    }
+
+    50%{
+        transform: translateY(15px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}

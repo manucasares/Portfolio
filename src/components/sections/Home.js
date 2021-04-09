@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+
+import { HomeSVG } from '../HomeSVG';
 
 export const Home = () => {
     return (
@@ -21,6 +23,9 @@ export const Home = () => {
                 </div>
              
             </div>
+
+            <HomeSVG />
+
             
         </header>
     )
