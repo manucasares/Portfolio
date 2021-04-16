@@ -6,12 +6,12 @@ export const About = () => {
 
     return (
         <div className="section about__screen">
-            <div className="text-container">
+            <div className="text-container" id="text_container">
 
                 <Title
                     text="About Me"
-                    font="Merriweather"
                     color="#303030"
+                    fontWeight = '400'
                 />
 
                 <p className="description">

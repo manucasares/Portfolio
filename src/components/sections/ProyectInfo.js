@@ -12,7 +12,7 @@ export const ProyectInfo = ( { proyectSelected } ) => {
 
 
     return (
-        <div className="proyect__info">
+        <div className="proyect__info" id="proyect__info">
 
             <h2 className="name"> { name } </h2>
 
@@ -24,17 +24,24 @@ export const ProyectInfo = ( { proyectSelected } ) => {
 
             <div className="btns__container">
                 {
-                    ( repository ) &&
-                        <a
-                            href={ repository }
-                            target="_blank"
-                            rel="noreferrer"
-                        >
-                            <button className="btn btn__repository">
-                                <i className="fab fa-github"></i>
-                                <span>Repository</span>
+                    ( repository )
+                        
+                        ?   <a
+                                href={ repository }
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                <button className="btn btn__repository">
+                                    <i className="fab fa-github"></i>
+                                    <span>Repository</span>
+                                </button>
+                            </a>
+                        
+                        :   <button className="btn btn__lock" disabled>
+                                <i className="fas fa-lock"></i>
+                                <span> Private </span>
                             </button>
-                        </a>
+                        
                 }
     
                 <a

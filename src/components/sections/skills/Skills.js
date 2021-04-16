@@ -1,7 +1,8 @@
 import React from 'react';
 
-import { Title } from '../Title';
-import { skills } from '../../data/skills_data';
+import { Title } from '../../Title';
+import { skills } from '../../../data/skills_data';
+import { SkillCoin } from './SkillCoin';
 
 export const Skills = () => {
 
@@ -12,6 +13,7 @@ export const Skills = () => {
 
             <Title
                 text="Skills"
+                color="#161616"
             />
 
             <div className="dark__background">
@@ -30,12 +32,7 @@ export const Skills = () => {
                         <div className="icons__container good__experience__icons__container">
                             {
                                 good_experience.map( icon => (
-                                    <img
-                                        key={ icon }
-                                        src={ `images/skills/${ icon }.png` }
-                                        alt={ icon }
-                                        className="icon"
-                                    />
+                                    <SkillCoin icon={ icon } key={ icon } />
                                 ))
                             }
                         </div>
@@ -54,12 +51,8 @@ export const Skills = () => {
                         <div className="icons__container little__experience__icons__container">
                             {
                                 little_experience.map( icon => (
-                                    <img
-                                        key={ icon }
-                                        src={ `images/skills/${ icon }.png` }
-                                        alt={ icon }
-                                        className="icon"
-                                    />
+                                    <SkillCoin icon={ icon } key={ icon } />
+
                                 ))
                             }
                         </div>

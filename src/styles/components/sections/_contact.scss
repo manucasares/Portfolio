@@ -1,8 +1,8 @@
 
 
 .contact__screen {
-    background: url('../../../assets/backgrounds/background-violeta.jpg') no-repeat center center / cover;
-
+    // background: url('../../../assets/backgrounds/background-violeta.jpg') no-repeat center center / cover;
+    background: linear-gradient(to right, $main-dark, $main-light);
     form {
         align-items: center;
         display: flex;
@@ -32,7 +32,7 @@
                 &:valid + .label .content-label {
                     transform: translateY(-150%);
                     font-size: 14px;
-                    color: $orange;
+                    color: $color-contact;
                 }
 
                 &:focus + .label::after,
@@ -58,7 +58,7 @@
                     bottom: -1px;
                     height: 100%;
                     width: 100%;
-                    border-bottom: 3px solid $orange;
+                    border-bottom: 3px solid $color-contact;
                     transform: translateX(-100%);
                     transition: transform .3s ease;
                 }
@@ -75,6 +75,23 @@
             
         }
 
+        button {
+            padding: 10px 30px;
+            border-radius: 3px;
+            border: none;
+            background: $color-contact;
+            color: $white;
+            font-size: 20px;
+            letter-spacing: 2.5px;
+
+            cursor: pointer;
+            transition: $transition;
+
+            &:hover {
+                background: lighten($color-contact, $amount: 40);
+                color: $color-contact;
+            }
+        }
 
     }
 

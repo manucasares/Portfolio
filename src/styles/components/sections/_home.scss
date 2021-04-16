@@ -19,16 +19,25 @@
             margin: 0;
             background: linear-gradient(to right, $main-dark, $main-light);
             -webkit-text-fill-color: transparent;
-            animation: text-movement infinite .3s;
             -webkit-background-clip: text;
+            opacity: 0;
+            animation: fadeIn 1s forwards 0s ease;
         }
 
         .occupation {
             font-size: 2rem;
             font-weight: 400;
         }
+        
+        .description, .occupation {
+            opacity: 0;
+            animation: fadeIn 1s forwards .5s ease;
+        }
 
         .social {
+            opacity: 0;
+            animation: fadeIn 1s forwards 1s ease;
+
             i {
                 font-size: 2.3rem;
                 color: darken($color: $main-dark, $amount: 10);
@@ -43,3 +52,13 @@
     }
 }
 
+@keyframes fadeIn{
+    0%{
+        transform: scale(.8) translateX(-150px);
+        opacity: 0;
+        }
+    100%{
+        transform: scale(1) translateX(0);
+        opacity: 1;
+        }
+}

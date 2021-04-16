@@ -138,17 +138,26 @@
                 }
             }
 
+            .btn__lock,
             .btn__repository {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                background-color: #333;
-                color: white;
 
-                .fa-github, span {
+                i,
+                span {
                     margin: 0 5px;
                 }
+            }
+            .btn__repository {
+                background-color: #333;
+                color: white;
+            }
 
+            .btn__lock {
+                background-color: rgb(128, 128, 128);
+                color: white;
+                pointer-events: none;
             }
     
             .btn__live {

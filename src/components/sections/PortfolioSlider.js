@@ -29,7 +29,7 @@ export const PortfolioSlider = ( { setProyectSelected } ) => {
 
 
     return (
-        <div className="portfolio__slider">
+        <div className="portfolio__slider" id="portfolio__slider">
 
             {
                 proyects.map( ( { id }, i ) => (

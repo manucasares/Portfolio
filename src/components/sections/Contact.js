@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+import emailjs from 'emailjs-com';
+
 import { useForm } from '../../hooks/useForm'
 import { Title } from '../Title'
 
@@ -10,18 +12,31 @@ export const Contact = () => {
         message: ''
     });
 
-
-    const handleSubmit = (e) => {
+    const sendEmail = (e) => {
         e.preventDefault();
-    }
+
+        if( [ name, email, message ].some( v => !v ) ) {
+            console.log('entra en validacion')
+            return;
+        }
+    
+        emailjs.sendForm('service_tetp2rj', 'template_dxxc8zl', e.target, 'user_gndPnP4XXkXKL54I8d0bh')
+          .then((result) => {
+              console.log(result.text);
+          }, (error) => {
+              console.log(error.text);
+          });
+      }
+
 
     return (
         <div className="section contact__screen">
-           <Title text="Contact Me"/>
+           <Title text="Contact Me" />
 
 
            <form 
-                onSubmit={ handleSubmit }
+                onSubmit={ sendEmail }
+                id="form"
             >
                 {/* Name  */}
                <div className="input-container">
@@ -81,7 +96,7 @@ export const Contact = () => {
                 </div>
 
                 <button>
-                    send
+                    Send
                 </button>
 
            </form>
