@@ -8,9 +8,10 @@ export const observeSections = () => {
     const animatedNodes = [ about_text, ...coinsSkills, portfolioSlider, proyectInfo, form ]
     
     const callback = ( entries ) => {
-        entries.forEach( entry => {
-            if ( entry.isIntersecting ) {
 
+        entries.forEach( entry => {
+
+            if ( entry.isIntersecting ) {
 
                 switch ( entry.target ) {
                     case about_text:
@@ -21,9 +22,7 @@ export const observeSections = () => {
                         
                     case coinsSkills.find( c => entry.target === c ):
                         entry.target.classList.add('animation');
-                        entry.target.style.animationDelay = `${ ( Math.random() * .7 + .3) }s`
-                        // console.log(Math.floor( Math.random() * 3 + 1))
-                    
+                        entry.target.style.animationDelay = `${ ( Math.random() * .7 + .4 ) }s`
                         break;
 
                     case proyectInfo:
@@ -47,7 +46,7 @@ export const observeSections = () => {
 
     const options = {};
 
-    const observer = new IntersectionObserver( callback, options);
+    const observer = new IntersectionObserver( callback, options );
 
     animatedNodes.forEach( node => {
         observer.observe( node );

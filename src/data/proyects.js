@@ -39,9 +39,9 @@ export const proyects = [
     },
     {
         id: 'p4',
-        name: 'Lofi girl',
+        name: 'Portfolio',
         description: 'A chess game made with vanilla Javascript and without a single dependency, where you can play against a friend.',
-        img: 'NonexistingProyect',
+        img: 'Portfolio',
         skills: [ 'HTML,', ' CSS,', ' Javascript,', ' Sass,', ' React,', ' Firebase.' ],
         live_link: 'https://manuelcasareskitcheninventory.netlify.app/',
         repository: null

@@ -4,7 +4,7 @@ import chessImg from '../../assets/proyects_images/Chess.png';
 import estrategaImg from '../../assets/proyects_images/Estratega.png';
 import kitchenInventoryImg from '../../assets/proyects_images/KitchenInventory.png';
 import laMilongaImg from '../../assets/proyects_images/LaMilonga.png';
-import lofiImg from '../../assets/proyects_images/NonexistingProyect.png';
+import lofiImg from '../../assets/proyects_images/Portfolio.png';
 
 import { proyects } from '../../data/proyects';
 
