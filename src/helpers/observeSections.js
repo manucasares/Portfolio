@@ -44,7 +44,9 @@ export const observeSections = () => {
         });
     }
 
-    const options = {};
+    const options = { 
+        threshold: .35 
+    };
 
     const observer = new IntersectionObserver( callback, options );
 

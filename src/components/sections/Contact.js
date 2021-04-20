@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import emailjs from 'emailjs-com';
 
 import { useForm } from '../../hooks/useForm'
 import { Title } from '../Title'
+import { Context } from '../../MainApp';
 
 export const Contact = () => {
+
+    const { language, languages } = useContext( Context );
+
+    const { title, name_text, message_text, button } = languages[ language ].contact;
 
     const [ { name, email, message }, handleInputChange ] = useForm({
         name: '',
@@ -31,7 +36,7 @@ export const Contact = () => {
 
     return (
         <div className="section contact__screen">
-           <Title text="Contact Me" />
+           <Title text={ title } />
 
 
            <form 
@@ -52,7 +57,7 @@ export const Contact = () => {
                     />
 
                     <label htmlFor="name" className="label">
-                        <span className="content-label">Name</span>
+                        <span className="content-label"> { name_text } </span>
                     </label>
 
                </div>
@@ -90,13 +95,13 @@ export const Contact = () => {
                     />
 
                     <label htmlFor="message" className="label">
-                        <span className="content-label">Message</span>
+                        <span className="content-label"> { message_text } </span>
                     </label>
 
                 </div>
 
                 <button>
-                    Send
+                    { button }
                 </button>
 
            </form>

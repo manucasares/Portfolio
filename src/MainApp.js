@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, createContext, useState } from 'react';
 
 import { Home } from './components/sections/Home';
 import { About } from './components/sections/About';
@@ -7,17 +7,24 @@ import { Portfolio } from './components/sections/Portfolio';
 import { Contact } from './components/sections/Contact';
 import { Canvas } from './components/Canvas';
 import { observeSections } from './helpers/observeSections';
+import { languages } from './languages/languages';
 
+export const Context = createContext();
 
 export const MainApp = () => {
 
+    const [language, setLanguage] = useState( 'en' );
+
     useEffect(() => {
         observeSections();
-    }, [])
-
+    }, []);
 
     return (
-        <div>
+        <Context.Provider value={{
+            language,
+            languages,
+            setLanguage
+        }}>
 
             <Home />
             <div className="canvas-container">
@@ -28,6 +35,6 @@ export const MainApp = () => {
             <Portfolio />
             <Contact />
             
-        </div>
+        </Context.Provider>
     )
-}
+};

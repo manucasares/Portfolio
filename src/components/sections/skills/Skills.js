@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 import { Title } from '../../Title';
 import { skills } from '../../../data/skills_data';
 import { SkillCoin } from './SkillCoin';
+import { Context } from '../../../MainApp';
 
 export const Skills = () => {
+
+    
+    const { language, languages } = useContext( Context );
+
+    const { title, good, little } = languages[ language ].skills;
 
     const { good_experience, little_experience } = skills;
 
@@ -12,7 +18,7 @@ export const Skills = () => {
         <div className="section skills__screen">
 
             <Title
-                text="Skills"
+                text={ title }
                 color="#161616"
             />
 
@@ -24,7 +30,7 @@ export const Skills = () => {
                     <div className="good__experience">
 
                         <Title
-                            text="Good experience"
+                            text={ good }
                             underlined={ false }
                             fontSize="2rem"
                         />
@@ -43,7 +49,7 @@ export const Skills = () => {
                     <div className="little__experience">
 
                         <Title
-                            text="Little experience"
+                            text={ little }
                             underlined={ false }
                             fontSize="2rem"
                         />

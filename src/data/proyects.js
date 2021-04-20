@@ -13,7 +13,7 @@ export const proyects = [
     {
         id: 'p1',
         name: 'Anotador de Estratega',
-        description: 'A chess game made with vanilla Javascript and without a single dependency, where you can play against a friend.',
+        description: 'A scorer for a game made with React in which you can easily follow the score of the players.',
         img: 'Estratega',
         skills: [ 'HTML,', ' CSS,', ' Javascript,', ' Sass,', ' React.' ],
         live_link: 'https://manuelcasaresestratega.netlify.app/',
@@ -22,7 +22,7 @@ export const proyects = [
     {
         id: 'p2',
         name: 'Kitchen inventory',
-        description: 'A chess game made with vanilla Javascript and without a single dependency, where you can play against a friend.',
+        description: 'A project built with MERN stack in which you can manage your inventory.',
         img: 'KitchenInventory',
         skills: [ 'HTML,', ' CSS,', ' Javascript,', ' Sass,', ' React,', ' Node,', ' Express,', ' MongoDB.' ],
         live_link: 'https://manuelcasareskitcheninventory.netlify.app/',
@@ -31,7 +31,7 @@ export const proyects = [
     {
         id: 'p3',
         name: 'La Milonga Argentina',
-        description: 'A chess game made with vanilla Javascript and without a single dependency, where you can play against a friend.',
+        description: 'A tango website made for a client.',
         img: 'LaMilonga',
         skills: [ 'HTML,', ' CSS,', ' Javascript,', ' Sass,', ' React,', ' Firebase.' ],
         live_link: 'https://manuelcasareskitcheninventory.netlify.app/',
