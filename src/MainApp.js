@@ -13,7 +13,7 @@ export const Context = createContext();
 
 export const MainApp = () => {
 
-    const [language, setLanguage] = useState( 'en' );
+    const [language, setLanguage] = useState( 'es' );
 
     useEffect(() => {
         observeSections();

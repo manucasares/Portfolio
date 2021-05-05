@@ -3,12 +3,10 @@
     position: relative;
 
     .dark__background{
-        position: absolute;
-        bottom: 5%;
-        left: 50%;
-        transform: translateX(-50%);
+        margin: 0 auto;
         width: 80%;
         height: 75%;
+        padding: 1rem 0 2rem;
         background-color: rgba($color: #515151, $alpha: .45);
         border-radius: 20px;
  

@@ -3,18 +3,21 @@
 .contact__screen {
     // background: url('../../../assets/backgrounds/background-violeta.jpg') no-repeat center center / cover;
     background: linear-gradient(to right, $main-dark, $main-light);
+    overflow: hidden;
+    padding-bottom: 3rem;
     form {
         align-items: center;
         display: flex;
         flex-direction: column;
-        margin-top: 7rem;
-        
+        margin-top: 4rem;
+        opacity: 0;
+
         .input-container {
             position: relative;
             width: 90%;
-            max-width: 800px;
+            max-width: 50rem;
             margin-bottom: 4rem;
-            padding: 5px 0;
+            padding: 0.313rem 0;
             overflow: hidden;
 
             .input {
@@ -22,7 +25,7 @@
                 color: #595f6e;
                 width: 100%;
                 height: 100%;
-                padding-top: 20px;
+                padding-top: 1.25rem;
                 border: none;
                 outline: none;
                 background: none;
@@ -74,6 +77,35 @@
             
             
         }
+
+        .textarea-container {
+            overflow: visible;
+
+            &:focus-within label {
+                color: $color-contact;
+            }
+            
+            textarea {
+                display: inline-block;
+                max-width: 100%;
+                min-width: 100%;
+                min-height: 7rem;
+                margin-top: .5rem;
+                border: none;
+                outline: none;
+                border-radius: 3px;
+                background: rgba($color: black, $alpha: .40);
+                padding: .5rem .5rem;
+
+                color: white;
+            }
+
+            label {
+                color: white;
+                transition: $transition;
+            }
+        }
+        
 
         button {
             padding: 10px 30px;

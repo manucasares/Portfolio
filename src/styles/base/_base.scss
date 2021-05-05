@@ -5,12 +5,16 @@ html, body {
     font-family: 'Open Sans', sans-serif;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 a {
     text-decoration: none;
 }
 
 .section {
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .container {

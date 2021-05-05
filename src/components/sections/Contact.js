@@ -11,7 +11,7 @@ export const Contact = () => {
 
     const { title, name_text, message_text, button } = languages[ language ].contact;
 
-    const [ { name, email, message }, handleInputChange ] = useForm({
+    const [ { name, email, message }, handleInputChange, reset ] = useForm({
         name: '',
         email: '',
         message: ''
@@ -31,7 +31,9 @@ export const Contact = () => {
           }, (error) => {
               console.log(error.text);
           });
-      }
+
+        reset();
+    }
 
 
     return (
@@ -82,22 +84,19 @@ export const Contact = () => {
                </div>
 
                 {/* Message */}
-                <div className="input-container">
+                <div className="input-container textarea-container">
 
-                    <input 
-                        className="input"
+                    <label htmlFor="message"> { message_text } </label>
+
+                    <textarea 
                         type="search"
                         name="message"
                         value={ message }
                         onChange={ handleInputChange }
                         autoComplete="off"
-                        required
-                    />
-
-                    <label htmlFor="message" className="label">
-                        <span className="content-label"> { message_text } </span>
-                    </label>
-
+                        required 
+                    >
+                    </textarea>
                 </div>
 
                 <button>

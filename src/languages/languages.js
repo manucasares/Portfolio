@@ -1,8 +1,5 @@
 export const languages = {
     en: {
-        home: {
-            mission: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam, quae.',
-        },
         about: {
             title: 'About Me',
             p1: `Hi, I’m Manuel and I’m a passionate Frontend Web Developer. I have some knowledge with Backend technologies too, such as Firebase, MongoDB, Node.js and Express.`,
@@ -22,9 +19,6 @@ export const languages = {
         }
     },
     es: {
-        home: {
-            mission: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam, quae.',
-        },
         about: {
             title: 'Acerca de',
             p1: `Hola, soy Manuel y soy un Frontend Web Developer apasionado. También tengo algunos conocimientos con tecnologias Backend, como Firebase, MongoDB, Node.js and Express.`,

@@ -15,7 +15,7 @@ export const Canvas = () => {
         const innerWidth = window.innerWidth;
 
         const circleLength = 100;
-        const colorOpacity = 7;
+        const colorOpacity = 60;
         const circleArr = [];
         const colorsArr = [
             `rgba(225, 75, 90, .${ colorOpacity })`,
