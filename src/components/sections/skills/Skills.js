@@ -32,7 +32,7 @@ export const Skills = () => {
                         <Title
                             text={ good }
                             underlined={ false }
-                            fontSize="2rem"
+                            fontSize="clamp(26px, 2.6vw, 34px)"
                         />
 
                         <div className="icons__container good__experience__icons__container">
@@ -51,7 +51,7 @@ export const Skills = () => {
                         <Title
                             text={ little }
                             underlined={ false }
-                            fontSize="2rem"
+                            fontSize="clamp(26px, 2.6vw, 34px)"
                         />
 
                         <div className="icons__container little__experience__icons__container">

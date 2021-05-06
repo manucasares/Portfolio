@@ -18,8 +18,10 @@ export const ProyectInfo = ( { proyectSelected } ) => {
 
             <p className="description"> { description } </p>
 
-            <p className="skills__used">
-                Made with: { skills.map( skill => <span key={ skill } > { skill } </span> ) }
+            <p className="description">
+                Made with: {
+                    skills.map( skill => <span key={ skill } > { skill } </span> )
+                }
             </p>
 
             <div className="btns__container">

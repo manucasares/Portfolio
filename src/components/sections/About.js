@@ -17,7 +17,6 @@ export const About = () => {
                 <Title
                     text={ title }
                     color="#303030"
-                    fontWeight = '400'
                 />
 
                 <p className="description"> { p1 } </p>

@@ -1,31 +1,27 @@
 
 .home__screen {
-    background: url('../../../assets/backgrounds/home.svg');
-    background-size: 50%;
-    background-repeat: no-repeat;
-    background-position: right;
-    padding-left: 3.5rem;
-    
+    background: url('../../../assets/backgrounds/home.svg') no-repeat right/50% ;
+    padding-left: 3.5rem;   
     display: flex;
     justify-content: flex-start;
     align-items: center;
     position: relative;
 
     .language-alert {
+        font-size: $fz-200;
         position: absolute;
         top: 0;
         left: 50%;
-        transform: translate( -50%, -100% );
+        transform: translate(-50%, -100%);
         background: rgba($color: black, $alpha: .6);
         padding: 0 2rem;
         border-radius: 0 0 5px 5px;
         color: white;
-
         transition: $transition;
     }
 
     .language-alert-active {
-        transform: translate( -50%, 0% );
+        transform: translate(-50%, 0%);
     }
 
     .language-toggle {
@@ -40,6 +36,7 @@
         p {
             margin: 0;
             font-weight: 600;
+            font-size: $fz-300;
         }
 
         .toggle {
@@ -71,9 +68,8 @@
     }
 
     .text-container {
-        
         .name {
-            font-size: 3rem;
+            font-size: $fz-800;
             padding: .5rem 0;
             margin: 0;
             background: linear-gradient(to right, $main-dark, $main-light);
@@ -84,7 +80,7 @@
         }
 
         .occupation {
-            font-size: 2rem;
+            font-size: $fz-600;
             font-weight: 400;
         }
         
@@ -102,7 +98,7 @@
             }
 
             i {
-                font-size: 2.3rem;
+                font-size: $fz-700;
                 color: darken($color: $main-dark, $amount: 10);
                 cursor: pointer;
                 transition: $transition;
@@ -112,17 +108,16 @@
                 }
             }
         }
-
     }
 }
 
 @keyframes fadeIn{
-    0%{
+    0% {
         transform: scale(.8) translateX(-150px);
         opacity: 0;
-        }
-    100%{
+    }
+    100% {
         transform: scale(1) translateX(0);
         opacity: 1;
-        }
+    }
 }
