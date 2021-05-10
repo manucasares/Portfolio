@@ -1,13 +1,18 @@
 import React, { useEffect, useRef } from 'react';
+import { useWindowSize } from '../hooks/useWindowSize';
 
 import { Circle } from '../models/Circle';
 
 
 export const Canvas = () => {
 
-    const canvasRef = useRef(null);
+    const { width }  = useWindowSize();
+
+    const canvasRef = useRef( null );
+
+
   
-    useEffect(() => {
+    useEffect( () => {
         
         const canvas = canvasRef.current;
         const context = canvas.getContext( '2d' );
@@ -27,7 +32,8 @@ export const Canvas = () => {
         
         const parentCanvas = canvas.parentNode;
 
-        canvas.width = parentCanvas.offsetWidth;
+        // canvas.width = parentCanvas.offsetWidth;
+        canvas.width = width;
         canvas.height = parentCanvas.offsetHeight;
 
         for ( let i = 0; i < circleLength; i++ ) {
@@ -53,7 +59,7 @@ export const Canvas = () => {
 
         render();
 
-    }, []);
+    }, [width] );
 
     return (
         <canvas ref={ canvasRef } id="canvas" />

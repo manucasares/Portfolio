@@ -1,0 +1,31 @@
+@media screen and ( max-width: 1140px ) {
+    // ======================= Portfolio ======================= //
+    .desktop__portfolio__container {
+        display: none;
+    }
+
+    .listed__portfolio__container {
+        display: block;
+    }
+}
+
+@media screen and ( max-width: 768px ) {
+    // ======================= Portfolio ======================= //
+    .listed__portfolio__container :is( .listed__proyect.left, .listed__proyect.right ) {
+        flex-direction: column;
+        gap: 3rem;
+
+        .proyect__info  {
+            width: 100%;
+            order: 1;
+            align-items: center;
+            text-align: center;
+        }
+
+        img {
+            width: 100%;
+            order: 2;
+        }
+
+    }
+}

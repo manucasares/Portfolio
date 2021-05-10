@@ -1,18 +1,9 @@
 import React, { useEffect } from 'react';
 
-import chessImg from '../../assets/proyects_images/Chess.png';
-import estrategaImg from '../../assets/proyects_images/Estratega.png';
-import kitchenInventoryImg from '../../assets/proyects_images/KitchenInventory.png';
-import laMilongaImg from '../../assets/proyects_images/LaMilonga.png';
-import lofiImg from '../../assets/proyects_images/Portfolio.png';
-
 import { proyects } from '../../data/proyects';
 
 
 export const PortfolioSlider = ( { setProyectSelected } ) => {
-
-    const images = [ chessImg, estrategaImg, kitchenInventoryImg, laMilongaImg, lofiImg ];
-
 
     useEffect(() => {
         document.querySelector( '.portfolio__slider #p2' ).click();
@@ -46,7 +37,7 @@ export const PortfolioSlider = ( { setProyectSelected } ) => {
             }
 
             {
-                proyects.map( ( { name, id }, i ) => (
+                proyects.map( ( { name, id, img }, i ) => (
 
                     <label
                         key={ id }
@@ -54,7 +45,7 @@ export const PortfolioSlider = ( { setProyectSelected } ) => {
                         htmlFor={ `p${ i }` }
                     >
                         <img
-                            src={ images[ i ] }
+                            src= { `images/proyects_images/${img}.png` } 
                             alt={ name }
                         />
                     </label>

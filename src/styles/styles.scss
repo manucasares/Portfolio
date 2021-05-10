@@ -1,17 +1,14 @@
-
 // Config
 
 @import './base/settings.scss';
 @import './base/base.scss';
-
 
 // General
 
 @import './components/title.scss';
 @import './components/home-svg.scss';
 @import './components/canvas';
-
-
+@import './components/spinner';
 
 // Sections
 
@@ -21,4 +18,7 @@
 @import './components/sections/portfolio.scss';
 @import './components/sections/contact.scss';
 
+// Media queries
+
+@import './mediaqueries.scss';
 

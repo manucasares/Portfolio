@@ -4,8 +4,9 @@ export const observeSections = () => {
     const portfolioSlider = document.getElementById( 'portfolio__slider' );
     const proyectInfo = document.getElementById( 'proyect__info' );
     const form = document.getElementById( 'form' );
+    const listed__proyect = [ ...document.querySelectorAll('.listed__proyect') ];
     
-    const animatedNodes = [ about_text, ...coinsSkills, portfolioSlider, proyectInfo, form ]
+    const animatedNodes = [ about_text, ...coinsSkills, portfolioSlider, proyectInfo, ...listed__proyect ,form ]
     
     const callback = ( entries ) => {
 
@@ -13,28 +14,41 @@ export const observeSections = () => {
 
             if ( entry.isIntersecting ) {
 
+                const entry_classList = entry.target.classList;
+
                 switch ( entry.target ) {
                     case about_text:
-                        about_text.classList.add('animate__animated');
-                        about_text.classList.add('animate__fadeInRight');
-                        about_text.classList.add('animate__slow');
+                        entry_classList.add('animate__animated');
+                        entry_classList.add('animate__fadeInRight');
+                        entry_classList.add('animate__slow');
                         break;
                         
                     case coinsSkills.find( c => entry.target === c ):
-                        entry.target.classList.add('animation');
-                        entry.target.style.animationDelay = `${ ( Math.random() * .7 + .4 ) }s`
+                        entry_classList.add('animation');
+                        entry.target.style.animationDelay = `${ ( Math.random() * .5 + .3 ) }s`
                         break;
 
                     case proyectInfo:
-                        proyectInfo.classList.add('animate__animated');
-                        proyectInfo.classList.add('animate__fadeInRight');
-                        proyectInfo.classList.add('animate__slow');
+                        entry_classList.add('animate__animated');
+                        entry_classList.add('animate__fadeInRight');
+                        entry_classList.add('animate__slow');
+                        break;
+
+                    case listed__proyect.find( p => entry.target === p ):
+                        entry_classList.add('animate__animated');
+                        if ( entry_classList.contains( 'left' ) ) {
+                            entry_classList.add('animate__fadeInLeft');
+                            entry_classList.add('animate__slow');
+                        } else {
+                            entry_classList.add('animate__fadeInRight');
+                            entry_classList.add('animate__slow');
+                        }
                         break;
 
                     case form:
-                        form.classList.add('animate__animated');
-                        form.classList.add('animate__fadeInUp');
-                        form.classList.add('animate__slow');
+                        entry_classList.add('animate__animated');
+                        entry_classList.add('animate__fadeInUp');
+                        entry_classList.add('animate__slow');
                         break;
                     
                     default:

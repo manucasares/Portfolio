@@ -15,12 +15,14 @@ export const languages = {
             title: 'Contact Me',
             name_text: 'Name',
             message_text: 'Message',
-            button: 'Send'
+            button: 'Send',
+            email_success: 'Email sent successfully!',
+            email_error: 'There was a problem sending your email.'
         }
     },
     es: {
         about: {
-            title: 'Acerca de',
+            title: 'Sobre Mí',
             p1: `Hola, soy Manuel y soy un Frontend Web Developer apasionado. También tengo algunos conocimientos con tecnologias Backend, como Firebase, MongoDB, Node.js and Express.`,
             p2: `Mi objetivo es encontrar trabajo en una empresa que me permita seguien aprendiendo todos los días y crecer en el mundo IT`,
             p3: `Actualmente no tengo más experiencia que un sitio web Fullstack que hice para un cliente, ¡pero estoy seguro de que te gustarán estos increibles proyectos!`
@@ -35,7 +37,9 @@ export const languages = {
             title: 'Contacto',
             name_text: 'Nombre',
             message_text: 'Mensaje',
-            button: 'Enviar'
+            button: 'Enviar',
+            email_success: 'Email envíado exitósamente!',
+            email_error: 'Hubo un problema envíando tu email.'
         }
     }
 }

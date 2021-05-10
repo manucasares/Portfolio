@@ -5,7 +5,7 @@ import { HomeSVG } from '../HomeSVG';
 
 export const Home = () => {
 
-    const { language, languages, setLanguage } = useContext( Context );
+    const { language, setLanguage } = useContext( Context );
 
     const language_alert_ref = useRef();
 
@@ -14,10 +14,10 @@ export const Home = () => {
             ? setLanguage( 'en' )
             : setLanguage( 'es' )
 
-        language_alert_ref.current.classList.add('language-alert-active');  
-        setTimeout(() => {
-            language_alert_ref.current.classList.remove('language-alert-active');  
-        }, 1000);     
+        language_alert_ref.current.classList.add('active');  
+        setTimeout( () => {
+            language_alert_ref.current.classList.remove('active');  
+        }, 1000 );     
     }
 
     return (

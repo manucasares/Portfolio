@@ -14,13 +14,16 @@ a {
     text-decoration: none;
 }
 
+img {
+    max-width: 100%;
+}
+
 .section {
     min-height: 100vh;
 }
 
 .container {
-    width: 80%;
-    max-width: $gridWidth;
+    width: min(90%, 1000px);
     margin: 0 auto;
 }
 
@@ -28,3 +31,6 @@ a {
     position: relative;
 }
 
+.active {
+    transform: translate(-50%, 0%) !important;
+}

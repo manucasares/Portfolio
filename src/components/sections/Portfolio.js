@@ -2,14 +2,14 @@ import React from 'react';
 
 import { Title } from '../Title';
 import { DesktopPortfolio } from './DesktopPortfolio';
+import { ListedPortfolio } from './ListedPortfolio';
 
 
 export const Portfolio = () => {
 
 
     return (
-        <div className="section portfolio__screen">
-           
+        <div className="section portfolio__screen">  
             <Title
                 text="Portfolio"
                 color="#161616"
@@ -17,6 +17,7 @@ export const Portfolio = () => {
 
             <DesktopPortfolio />
 
+            <ListedPortfolio />
         </div>
     )
 }

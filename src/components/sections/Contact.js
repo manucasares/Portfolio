@@ -1,15 +1,27 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import emailjs from 'emailjs-com';
 
 import { useForm } from '../../hooks/useForm'
 import { Title } from '../Title'
 import { Context } from '../../MainApp';
+import { Spinner } from '../Spinner';
 
 export const Contact = () => {
 
     const { language, languages } = useContext( Context );
 
-    const { title, name_text, message_text, button } = languages[ language ].contact;
+    const [ loading, setLoading ] = useState( false );
+
+    let success = false;
+
+    const {
+        title,
+        name_text,
+        message_text,
+        button,
+        email_success,
+        email_error
+    } = languages[ language ].contact;
 
     const [ { name, email, message }, handleInputChange, reset ] = useForm({
         name: '',
@@ -20,18 +32,33 @@ export const Contact = () => {
     const sendEmail = (e) => {
         e.preventDefault();
 
-        if( [ name, email, message ].some( v => !v ) ) {
-            console.log('entra en validacion')
+        if ( [ name, email, message ].some( v => !v ) ) {
             return;
         }
-    
-        emailjs.sendForm('service_tetp2rj', 'template_dxxc8zl', e.target, 'user_gndPnP4XXkXKL54I8d0bh')
-          .then((result) => {
-              console.log(result.text);
-          }, (error) => {
-              console.log(error.text);
-          });
 
+        if ( name.length < 2 ) {
+            return;
+        }
+
+        setLoading( true );  
+                                                                                               
+        emailjs.sendForm('service_tetp2rj', 'template_dxxc8zl', e.target, 'user_gndPnP4XXkXKL54I8d0b')
+            .then( () => {
+                success = true;
+                document.getElementById( 'email_success' ).classList.add( 'active' )
+            }, ( error ) => {
+                console.log( error );
+                success = false;
+                document.getElementById( 'email_error' ).classList.add( 'active' )
+            })
+            .finally( () => {
+                setLoading( false );
+                setTimeout(() => {
+                    document.getElementById( 'email_success' ).classList.remove( 'active' );
+                    document.getElementById( 'email_error' ).classList.remove( 'active' );
+                }, 2400);
+            });
+            
         reset();
     }
 
@@ -44,6 +71,7 @@ export const Contact = () => {
            <form 
                 onSubmit={ sendEmail }
                 id="form"
+                className="form"
             >
                 {/* Name  */}
                <div className="input-container">
@@ -94,16 +122,25 @@ export const Contact = () => {
                         value={ message }
                         onChange={ handleInputChange }
                         autoComplete="off"
-                        required 
+                        required
+                        maxLength="700"
                     >
                     </textarea>
                 </div>
+
+                {
+                    ( loading ) &&
+                        <Spinner />
+                }
 
                 <button>
                     { button }
                 </button>
 
-           </form>
+            </form>
+
+            <p className="email-msg success" id="email_success"> { email_success } </p>
+            <p className="email-msg error" id="email_error"> { email_error } </p>
         </div>
     )
 }
