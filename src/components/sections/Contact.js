@@ -12,7 +12,7 @@ export const Contact = () => {
 
     const [ loading, setLoading ] = useState( false );
 
-    let success = false;
+    // eslint-disable-next-line
 
     const {
         title,
@@ -44,11 +44,9 @@ export const Contact = () => {
                                                                                                
         emailjs.sendForm('service_tetp2rj', 'template_dxxc8zl', e.target, 'user_gndPnP4XXkXKL54I8d0b')
             .then( () => {
-                success = true;
                 document.getElementById( 'email_success' ).classList.add( 'active' )
             }, ( error ) => {
                 console.log( error );
-                success = false;
                 document.getElementById( 'email_error' ).classList.add( 'active' )
             })
             .finally( () => {
