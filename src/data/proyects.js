@@ -44,7 +44,7 @@ export const proyects = [
         img: 'Portfolio',
         skills: [ 'HTML,', ' CSS,', ' Javascript,', ' Sass,', ' React,', ' Firebase.' ],
         live_link: 'https://manuelcasareskitcheninventory.netlify.app/',
-        repository: null
+        repository: 'https://github.com/manucasares/Portfolio/'
     },
 ]
 

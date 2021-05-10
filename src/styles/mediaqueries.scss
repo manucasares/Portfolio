@@ -10,6 +10,22 @@
 }
 
 @media screen and ( max-width: 768px ) {
+    // ======================= Skills ======================= //
+    .skills__screen .dark__background :is(.good__experience, .little__experience) {
+                
+        .good__experience__icons__container {
+            grid-template-columns: repeat( 3, 1fr );
+        }
+
+        .little__experience__icons__container {
+            width: 100%;
+        }
+
+        .coin-container {
+            width: 4rem;
+            height: 4rem;
+        } 
+    }
     // ======================= Portfolio ======================= //
     .listed__portfolio__container :is( .listed__proyect.left, .listed__proyect.right ) {
         flex-direction: column;

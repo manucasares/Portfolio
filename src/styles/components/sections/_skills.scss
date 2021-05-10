@@ -4,8 +4,8 @@
 
     .dark__background{
         margin: 0 auto;
-        width: 80%;
-        height: 75%;
+        width: min(95%, 1100px);
+        min-height: 75%;
         padding: 1rem 0 2rem;
         background-color: rgba($color: #515151, $alpha: .45);
         border-radius: 20px;
@@ -16,6 +16,7 @@
             .good__experience__icons__container, 
             .little__experience__icons__container {
                 display: grid;
+                grid-gap: 1rem;
                 place-items: center;
                 margin: 0 auto;
             }
@@ -34,12 +35,17 @@
             }
 
             .coin-container {
+                width: 4.5rem;
+                height: 4.5rem;
                 opacity: 0;
                 transform: translateY( -50px );
+                display: flex;
+                justify-content: center;
+                align-items: center;
 
                 figure {
-                    width: 80px;
-                    height: 80px;
+                    width: 100%;
+                    height: 100%;
                     margin: 8px 0;
                     position: relative;
                     transition: all .5s ease;
@@ -70,6 +76,7 @@
                         transform: perspective(600px) rotateY(180deg);
                         overflow: auto;
                         color: white;
+                        font-size: $fz-200;
                         font-weight: 600;
                     }
 
