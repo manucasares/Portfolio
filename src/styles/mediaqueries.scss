@@ -10,6 +10,61 @@
 }
 
 @media screen and ( max-width: 768px ) {
+    // ======================= Home ======================= //
+    .home__screen {
+        background: rgb(49,146,141);
+        background: linear-gradient(40deg, rgba(49,146,141,1) 20%, rgba(54,210,166,1) 93%);
+        justify-content: center;
+        align-items: flex-start;
+        padding: 0;
+        
+        &::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 10vh;
+            background-color: white;
+            border-bottom: 1px solid $color-contact;
+            z-index: 1;
+        }
+
+        .language-toggle,
+        .text-container .social {
+            position: fixed;
+            top: 5vh;
+            transform: translateY(-50%);
+            z-index: 1000;
+        } 
+
+        .language-toggle {
+            left: 1.5rem;
+        }
+
+        .text-container {
+            text-align: center;
+            margin-top: 18vh;
+
+            .name {
+                background: none;
+                -webkit-text-fill-color: white;
+            }
+
+            .social {
+                opacity: 1;
+                animation: none;
+                right: 1.5rem;
+                margin: 0;
+            }
+        }
+
+        .home_svg_container {
+            width: min(320px, 95%);
+            right: 50%;
+            transform: translateX(50%);
+        }
+    }
+
     // ======================= Skills ======================= //
     .skills__screen .dark__background :is(.good__experience, .little__experience) {
                 

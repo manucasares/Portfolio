@@ -2,11 +2,10 @@ export const observeSections = () => {
     const about_text = document.getElementById( 'text_container' );
     const coinsSkills = [ ...document.querySelectorAll( '.coin-container' ) ];
     const portfolioSlider = document.getElementById( 'portfolio__slider' );
-    const proyectInfo = document.getElementById( 'proyect__info' );
     const form = document.getElementById( 'form' );
     const listed__proyect = [ ...document.querySelectorAll('.listed__proyect') ];
     
-    const animatedNodes = [ about_text, ...coinsSkills, portfolioSlider, proyectInfo, ...listed__proyect ,form ]
+    const animatedNodes = [ about_text, ...coinsSkills, portfolioSlider, ...listed__proyect ,form ]
     
     const callback = ( entries ) => {
 
@@ -28,11 +27,11 @@ export const observeSections = () => {
                         entry.target.style.animationDelay = `${ ( Math.random() * .5 + .3 ) }s`
                         break;
 
-                    case proyectInfo:
-                        entry_classList.add('animate__animated');
-                        entry_classList.add('animate__fadeInRight');
-                        entry_classList.add('animate__slow');
-                        break;
+                    // case proyectInfo:
+                    //     entry_classList.add('animate__animated');
+                    //     entry_classList.add('animate__fadeInRight');
+                    //     entry_classList.add('animate__slow');
+                    //     break;
 
                     case listed__proyect.find( p => entry.target === p ):
                         entry_classList.add('animate__animated');

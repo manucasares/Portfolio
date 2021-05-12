@@ -5,7 +5,9 @@ import { HomeSVG } from '../HomeSVG';
 
 export const Home = () => {
 
-    const { language, setLanguage } = useContext( Context );
+    const { language, languages, setLanguage } = useContext( Context );
+
+    const { description } = languages[ language ].home;
 
     const language_alert_ref = useRef();
 
@@ -51,6 +53,8 @@ export const Home = () => {
                 <h1 className="name"> Manuel Casares Rojas </h1>
 
                 <h2 className="occupation"> Front End Web Developer </h2>
+
+                <i className="description"> "{ description }" </i>
 
                 <div className="social">
 

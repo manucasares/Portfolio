@@ -5,15 +5,29 @@
     position: relative;
 }
 
+// .prueba {
+//     background: url('../../../assets/proyects_images/Portfolio.png') no-repeat center center / cover;
+//     width: 467px;
+//     height: 253px;
+// }
+
  // ======================= Proyect info  ======================= //
 
+.proyect__info__container {
+    position: relative;
+    width: 35%;
+    height: 60vh;
+}
+
 .proyect__info {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: .625rem 1.56rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 35%;
-    padding: 10px 25px;
     text-align: center;
     font-family: 'Open Sans', sans-serif;
     color: #1f3349;
@@ -25,6 +39,7 @@
     }
 
     .name {
+        margin-top: 0;
         font-weight: 400;
         font-size: $fz-600;
         text-transform: capitalize;
@@ -98,7 +113,7 @@
     // ======================= 3D SLIDER  ======================= //
     .portfolio__slider {
         width: 55%;
-        height: 15vw;
+        height: 13vw;
         position: relative;
         perspective: 1000px;
         transform-style: preserve-3d;
@@ -108,12 +123,15 @@
         }
 
         label {
+            background: url('../../../assets/proyects_images/Portfolio.png') no-repeat center center / cover;
             position: absolute;
             left: 0;
             right: 0;
             margin: auto;
-            width: 50%;
+            width: 55%;
             height: 100%;
+            // width: 467px;
+            // height: 253px;
             border-radius: 4px;
             cursor: pointer;
             transition: transform .4s ease;

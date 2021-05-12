@@ -6,17 +6,18 @@ import { ProyectInfo } from './ProyectInfo'
 
 export const DesktopPortfolio = () => {
 
-    const [ proyectSelected, setProyectSelected ] = useState( proyects[ 2 ] );
+    let middleProyect = 2;
+    const [ proyectIndex, setProyectIndex ] = useState( middleProyect );
 
     return (
         <div className="desktop__portfolio__container">
 
             <PortfolioSlider
-                setProyectSelected={ setProyectSelected }
+                setProyectIndex={ setProyectIndex }
             />
 
             <ProyectInfo
-                proyectSelected={ proyectSelected }
+                proyectIndex={ proyectIndex }
             />
             
         </div>

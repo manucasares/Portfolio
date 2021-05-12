@@ -12,7 +12,7 @@ export const ListedPortfolio = () => {
                         <div className={ `listed__proyect ${ index % 2 ? 'right' : 'left' }` } >
                             <img src={  `images/proyects_images/${ proyect.img }.png` } alt={ proyect.name } />    
                             <ProyectInfo 
-                                proyectSelected={ proyect }
+                                proyectIndex={ index }
                             />
     
                         </div>

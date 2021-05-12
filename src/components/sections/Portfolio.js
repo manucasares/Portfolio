@@ -10,6 +10,7 @@ export const Portfolio = () => {
 
     return (
         <div className="section portfolio__screen">  
+            {/* <div className="prueba"></div> */}
             <Title
                 text="Portfolio"
                 color="#161616"

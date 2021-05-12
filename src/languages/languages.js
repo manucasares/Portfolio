@@ -1,5 +1,8 @@
 export const languages = {
     en: {
+        home: {
+            description: 'All our dreams can come true, if we have the courage to pursue them.'
+        },
         about: {
             title: 'About Me',
             p1: `Hi, I’m Manuel and I’m a passionate Frontend Web Developer. I have some knowledge with Backend technologies too, such as Firebase, MongoDB, Node.js and Express.`,
@@ -21,6 +24,9 @@ export const languages = {
         }
     },
     es: {
+        home: {
+            description: 'Todos tus sueños se pueden convertir en realidad si tienes el coraje de perseguirlos.'
+        },
         about: {
             title: 'Sobre Mí',
             p1: `Hola, soy Manuel y soy un Frontend Web Developer apasionado. También tengo algunos conocimientos con tecnologias Backend, como Firebase, MongoDB, Node.js and Express.`,

@@ -64,6 +64,11 @@
     }
 
     .text-container {
+
+        & > * + * {
+            margin: 1.5rem 0 0 0;
+        }
+
         .name {
             font-size: $fz-800;
             padding: .5rem 0;
@@ -83,6 +88,13 @@
         .description, .occupation {
             opacity: 0;
             animation: fadeIn 1s forwards .5s ease;
+        }
+
+        .description {
+            display: inline-block;
+            width: max(60%, 250px);
+            line-height: 1.8rem;
+            font-size: $fz-400;
         }
 
         .social {

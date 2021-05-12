@@ -2,7 +2,7 @@ import React from 'react'
 
 export const HomeSVG = () => {
     return (
-        <svg className="home_svg_container" width="901" viewBox="0 0 901 787" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg className="home_svg_container" viewBox="0 0 901 787" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g id="undraw_coding_6mjf (2) 1" clipPath="url(#clip0)">
             <g id="plant">
             <path id="Vector" d="M130.75 276C130.75 276 204.04 349.29 162.67 458C121.3 566.71 233.58 747.64 233.58 747.64C233.58 747.64 232.38 747.46 230.15 747.07C79.63 720.5 4.84002 548.35 88.58 420.5C119.66 372.91 145.2 317.14 130.75 276Z" fill="#36D2A6"/>
