@@ -7,18 +7,27 @@ import { ProyectInfo } from './ProyectInfo'
 export const DesktopPortfolio = () => {
 
     let middleProyect = 2;
-    const [ proyectIndex, setProyectIndex ] = useState( middleProyect );
+    const [ proyectSelectedIndex, setProyectSelectedIndex ] = useState( middleProyect );
 
     return (
         <div className="desktop__portfolio__container">
 
             <PortfolioSlider
-                setProyectIndex={ setProyectIndex }
+                setProyectSelectedIndex={ setProyectSelectedIndex }
             />
 
-            <ProyectInfo
-                proyectIndex={ proyectIndex }
-            />
+            <div className="proyect__info__container">
+                {
+                    proyects.map( ( proyect, index ) => (
+                        <ProyectInfo
+                            proyectSelectedIndex={ proyectSelectedIndex }
+                            proyect={ proyect }
+                            proyectIndex={ index }
+                        />
+                    ) )
+                }
+            </div>
+
             
         </div>
     )

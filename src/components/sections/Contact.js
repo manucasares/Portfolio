@@ -32,7 +32,7 @@ export const Contact = () => {
     const sendEmail = (e) => {
         e.preventDefault();
 
-        if ( [ name, email, message ].some( v => !v ) ) {
+        if ( [ name, email, message ].some( v => !v.trim() ) ) {
             return;
         }
 
@@ -42,7 +42,7 @@ export const Contact = () => {
 
         setLoading( true );  
                                                                                                
-        emailjs.sendForm('service_tetp2rj', 'template_dxxc8zl', e.target, 'user_gndPnP4XXkXKL54I8d0b')
+        emailjs.sendForm('service_tetp2rj', 'template_dxxc8zl', e.target, 'user_gndPnP4XXkXKL54I8d0bh')
             .then( () => {
                 document.getElementById( 'email_success' ).classList.add( 'active' )
             }, ( error ) => {
@@ -64,7 +64,6 @@ export const Contact = () => {
     return (
         <div className="section contact__screen">
            <Title text={ title } />
-
 
            <form 
                 onSubmit={ sendEmail }

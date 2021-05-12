@@ -7,7 +7,7 @@ export const proyects = [
         description: 'A chess game made with vanilla Javascript and without a single dependency, where you can play against a friend.',
         img: 'Chess',
         skills: [ 'HTML,', ' CSS,', ' Javascript.' ],
-        live_link: 'https://manuelcasareschessgame.netlify.app/',
+        live_link: 'https://manuelcasares-chessgame.netlify.app/',
         repository: 'https://github.com/manucasares/Chess-Game'
     },
     {
@@ -16,7 +16,7 @@ export const proyects = [
         description: 'A scorer for a game made with React in which you can easily follow the score of the players.',
         img: 'Estratega',
         skills: [ 'HTML,', ' CSS,', ' Javascript,', ' Sass,', ' React, ', 'Redux.' ],
-        live_link: 'https://manuelcasaresestratega.netlify.app/',
+        live_link: 'https://manuelcasares-estratega.netlify.app',
         repository: 'https://github.com/manucasares/Estratega'
     },
     {
@@ -25,7 +25,7 @@ export const proyects = [
         description: 'A project built with MERN stack in which you can manage your inventory.',
         img: 'KitchenInventory',
         skills: [ 'HTML,', ' CSS,', ' Javascript,', ' Sass,', ' React,', 'Redux, ', ' Node,', ' Express,', ' MongoDB.' ],
-        live_link: 'https://manuelcasareskitcheninventory.netlify.app/',
+        live_link: 'https://manuelcasares-kitchen-inventory.netlify.app/',
         repository: 'https://github.com/manucasares/Kitchen---Frontend'
     },
     {
@@ -43,7 +43,7 @@ export const proyects = [
         description: 'A chess game made with vanilla Javascript and without a single dependency, where you can play against a friend.',
         img: 'Portfolio',
         skills: [ 'HTML,', ' CSS,', ' Javascript,', ' Sass,', ' React,', ' Firebase.' ],
-        live_link: 'https://manuelcasareskitcheninventory.netlify.app/',
+        live_link: 'https://manuelcasares-kitchen-inventory.netlify.app/',
         repository: 'https://github.com/manucasares/Portfolio/'
     },
 ]

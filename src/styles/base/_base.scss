@@ -34,3 +34,7 @@ img {
 .active {
     transform: translate(-50%, 0%) !important;
 }
+
+.events-none {
+    pointer-events: none;
+}

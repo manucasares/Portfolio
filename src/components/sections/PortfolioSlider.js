@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import { proyects } from '../../data/proyects';
 
 
-export const PortfolioSlider = ( { setProyectIndex } ) => {
+export const PortfolioSlider = ( { setProyectSelectedIndex } ) => {
 
     useEffect(() => {
         document.querySelector( '.portfolio__slider #p2' ).click();
@@ -13,7 +13,7 @@ export const PortfolioSlider = ( { setProyectIndex } ) => {
     const handleOnchange = ( e ) => ( e.target.checked );
 
 
-    const handleClick = ( index ) => setProyectIndex( index );
+    const handleClick = ( index ) => setProyectSelectedIndex( index );
     
 
 
@@ -42,10 +42,10 @@ export const PortfolioSlider = ( { setProyectIndex } ) => {
                         id={ `slide${ i }` }
                         htmlFor={ `p${ i }` }
                     >
-                        {/* <img
+                        <img
                             src= { `images/proyects_images/${img}.png` } 
                             alt={ name }
-                        /> */}
+                        />
                     </label>
                     
                 ) )

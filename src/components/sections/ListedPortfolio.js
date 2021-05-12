@@ -11,10 +11,11 @@ export const ListedPortfolio = () => {
                     <div key= { proyect.name }>
                         <div className={ `listed__proyect ${ index % 2 ? 'right' : 'left' }` } >
                             <img src={  `images/proyects_images/${ proyect.img }.png` } alt={ proyect.name } />    
-                            <ProyectInfo 
+                            <ProyectInfo
+                                proyectSelectedIndex={ index }
+                                proyect={ proyect }
                                 proyectIndex={ index }
                             />
-    
                         </div>
                         { ( index !== ( proyects.length - 1 ) ) && <hr /> }
                     </div>
