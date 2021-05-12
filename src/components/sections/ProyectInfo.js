@@ -1,9 +1,6 @@
 import React from 'react';
-import { proyects } from '../../data/proyects';
 
 export const ProyectInfo = ( { proyect, proyectIndex, proyectSelectedIndex } ) => {
-
-    console.log(proyect)
 
     const {
         id,  
@@ -55,7 +52,6 @@ export const ProyectInfo = ( { proyect, proyectIndex, proyectSelectedIndex } ) =
                                 <i className="fas fa-lock"></i>
                                 <span> Private </span>
                             </button>
-                        
                 }
     
                 <a
@@ -68,9 +64,6 @@ export const ProyectInfo = ( { proyect, proyectIndex, proyectSelectedIndex } ) =
                     </button>
                 </a>
             </div>
-
         </div>
-    
-    ) 
-    
+    )  
 }
