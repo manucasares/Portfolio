@@ -23,6 +23,7 @@ export const DesktopPortfolio = () => {
                             proyectSelectedIndex={ proyectSelectedIndex }
                             proyect={ proyect }
                             proyectIndex={ index }
+                            key={ proyect.id }
                         />
                     ) )
                 }

@@ -31,8 +31,8 @@ export const Home = () => {
             >
                 {
                     language === 'es' 
-                        ? <p>Español</p>
-                        : <p>English</p>
+                        ? <p> Español </p>
+                        : <p> English </p>
                 }
             </div>
 
@@ -58,11 +58,29 @@ export const Home = () => {
 
                 <div className="social">
 
-                    <i className="fab fa-github-square"></i>
+                    <a
+                        href="https://github.com/manucasares"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        <i className="fab fa-github-square"></i>
+                    </a>
 
-                    <i className="fab fa-linkedin"></i>
+                    <a
+                        href="https://www.linkedin.com/in/manuelcasares/"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        <i className="fab fa-linkedin"></i>
+                    </a>
 
-                    <i className="fas fa-address-card"></i>
+                    <a
+                        href="https://drive.google.com/file/d/1a9u73_GShdRe4HhhOttRYtEGOE2O6rsW/view?usp=sharing"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        <i className="fas fa-address-card"></i>
+                    </a>
                 </div>
              
             </div>
