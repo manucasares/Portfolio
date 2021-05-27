@@ -12,7 +12,7 @@ export const proyects = [
         },
         img: 'Gaming-Central',
         skills: [ 'HTML,', ' CSS,', ' Javascript.' ],
-        live_link: 'https://manuelcasares-chessgame.netlify.app/',
+        live_link: 'https://gaming-central-manuelcasares.netlify.app/',
         repository: 'https://github.com/manucasares/Gaming-Central'
     },
     {
@@ -66,7 +66,6 @@ export const proyects = [
         en: {
             description: 'Personal portfolio where I show my projects and my skills. I used a nice design with SVG animations for the "Home" section, for "About Me" and "Skills" I used Canvas API. I show the projects in a comfortable 3D Slider.',  
         },
-        description: 'A chess game made with vanilla Javascript and without a single dependency, where you can play against a friend.',
         img: 'Portfolio',
         skills: [ 'HTML,', ' CSS,', ' Javascript,', ' Sass,', ' React.' ],
         live_link: 'https://portfolio-manuelcasares.netlify.app/',
