@@ -30,7 +30,7 @@ export const languages = {
         about: {
             title: 'Sobre Mí',
             p1: `Hola, soy Manuel y soy un Frontend Web Developer apasionado. También tengo algunos conocimientos con tecnologias Backend, como Firebase, MongoDB, Node.js and Express.`,
-            p2: `Mi objetivo es encontrar trabajo en una empresa que me permita seguien aprendiendo todos los días y crecer en el mundo IT`,
+            p2: `Mi objetivo es encontrar trabajo en una empresa que me permita seguir aprendiendo todos los días y crecer en el mundo IT`,
             p3: `Actualmente no tengo más experiencia que un sitio web Fullstack que hice para un cliente, ¡pero estoy seguro de que te gustarán estos increibles proyectos!`
         },
 

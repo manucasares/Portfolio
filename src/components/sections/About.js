@@ -25,8 +25,6 @@ export const About = () => {
 
                 <p className="description"> { p3 } </p>
 
-
-
             </div>
         </div>
     )

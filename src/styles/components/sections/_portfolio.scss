@@ -5,17 +5,18 @@
     position: relative;
 }
 
- // ======================= Proyect info  ======================= //
+ // ====== Proyect info  ====== //
 
 .proyect__info__container {
     position: relative;
-    width: 35%;
-    height: 60vh;
+    width: 43%;
+    min-height: 60vh;
 }
 
 .proyect__info {
     position: absolute;
     top: 0;
+    right: -5rem;
     width: 100%;
     padding: .625rem 1.56rem;
     display: flex;
@@ -92,19 +93,17 @@
     }
 }
 
-// ======================= Desktop Component  ======================= //
+// ====== Desktop ====== //
 .desktop__portfolio__container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
+    margin-top: 5rem;
     width: 80%;
-    transform: translate(-50%, -40%);
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
 
-    // ======================= 3D SLIDER  ======================= //
+    // ====== 3D SLIDER  ====== //
     .portfolio__slider {
         width: 55%;
         height: 13vw;
@@ -174,7 +173,7 @@
 
 }
 
-// ======================= Listed Component  ======================= //
+// ====== Listed Component  ====== //
 .listed__portfolio__container {
     display: none;
     margin-bottom: 5rem;

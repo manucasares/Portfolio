@@ -29,7 +29,7 @@ export const PortfolioSlider = ( { setProyectSelectedIndex } ) => {
                         name="slider"
                         id={ `p${ i }` }
                         onChange={ handleOnchange } 
-                        onClick={ ( e ) => handleClick( i ) }
+                        onClick={ () => handleClick( i ) }
                     />
                 ) )
             }
@@ -43,7 +43,7 @@ export const PortfolioSlider = ( { setProyectSelectedIndex } ) => {
                         htmlFor={ `p${ i }` }
                     >
                         <img
-                            src= { `images/proyects_images/${img}.png` } 
+                            src= { `images/proyects_images/${ img }.png` } 
                             alt={ name }
                         />
                     </label>

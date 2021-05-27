@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
+
+import { Context } from '../../MainApp';
+
 
 export const ProyectInfo = ( { proyect, proyectIndex, proyectSelectedIndex } ) => {
+
+    const { language } = useContext( Context );
 
     const {
         id,  
         name,
-        description,
         skills,
         live_link,
         repository
@@ -25,7 +29,7 @@ export const ProyectInfo = ( { proyect, proyectIndex, proyectSelectedIndex } ) =
 
             <h2 className="name"> { name } </h2>
 
-            <p className="description"> { description } </p>
+            <p className="description"> { proyect[ language ]?.description } </p>
 
             <p className="description">
                 Made with: {
