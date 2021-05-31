@@ -47,7 +47,7 @@ export const proyects = [
         id: 'p3',
         name: 'La Milonga Argentina',
         es: {
-            description: 'Programación de sitio web para la Milonga Argentina. Diseñé un sistema muy intuitivo en el que el cliente puede gestionar la sección de artículos y albums por su propia cuenta. Construído principalmente con Reacty y Firebase.',  
+            description: 'Programación de sitio web para la Milonga Argentina. Diseñé un sistema muy intuitivo en el que el cliente puede gestionar la sección de artículos y albums por su propia cuenta. Construído principalmente con React y Firebase.',  
         },
         en: {
             description: 'Website programming for the Milonga Argentina. I designed a very intuitive system in which the client can manage the articles and albums section on their own. Built primarily with React and Firebase.',  

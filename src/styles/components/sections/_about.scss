@@ -8,10 +8,8 @@
     align-items: center;
 
     .text-container {
-        width: 40%;
+        width: min(40%, 600px);
         opacity: 0;
-        
-
         .description {
             font-size: $fz-400;
             line-height: 34px;

@@ -10,7 +10,6 @@ export class Circle {
         this.dy = dy;
         this.radius = radius;
         this.color = color;
-
     }
 
     draw( context ) {
@@ -33,8 +32,5 @@ export class Circle {
         this.y += this.dy;
 
         this.draw( context );
-
     }
-
-
 }

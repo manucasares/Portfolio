@@ -10,8 +10,7 @@ export const Canvas = () => {
 
     const canvasRef = useRef( null );
 
-
-  
+ 
     useEffect( () => {
         
         const canvas = canvasRef.current;
@@ -37,7 +36,7 @@ export const Canvas = () => {
         canvas.height = parentCanvas.offsetHeight;
 
         for ( let i = 0; i < circleLength; i++ ) {
-            const radius = Math.random() * 6 + 3;
+            const radius = Math.random() * width > 768 ? 6 + 3 : 3 + 1.5;
             const x = Math.random() * ( canvas.width - radius * 2 ) + radius;
             const y = Math.random() * ( canvas.height - radius * 2 ) + radius;
             const dx = ( Math.random() - 0.5 ) * 3;

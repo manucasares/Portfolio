@@ -12,13 +12,13 @@ import { languages } from './languages/languages';
 export const Context = createContext();
 
 export const MainApp = () => {
-
-    const [language, setLanguage] = useState( 'es' );
-
+    
+    const [ language, setLanguage ] = useState( 'es' );
+    
     useEffect(() => {
         observeSections();
     }, []);
-
+    
     return (
         <Context.Provider value={{
             language,

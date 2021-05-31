@@ -5,9 +5,9 @@ export const languages = {
         },
         about: {
             title: 'About Me',
-            p1: `Hi, I’m Manuel and I’m a passionate Frontend Web Developer. I have some knowledge with Backend technologies too, such as Firebase, MongoDB, Node.js and Express.`,
-            p2: `My goal is to find a job in a company that allows me to keep learning everyday and grow in the IT world.`,
-            p3: `I currently don’t have any experience more than a Fullstack website that I made for a client, but I’m sure you’ll like these following amazing proyects!`
+            p1: "Hi, I'm Manuel and I'm a passionate Frontend Web Developer. I love building Responsive UIs, primarily with CSS and React, that the user can enjoy and can easily navigate through the website. I also have some knowledge with Backend technologies, such as Firebase, MongoDB, Node.js, and Express.",
+            p2: 'My goal is to learn every day, finding work in a company that allows me to grow in the IT world and in which I can contribute with all the knowledge I have learned',
+            p3: 'I currently don’t have any experience more than a Fullstack website that I made for a client, but I’m sure you’ll like these following amazing proyects!'
         },
         skills: {
             title: 'Skills',
@@ -29,11 +29,10 @@ export const languages = {
         },
         about: {
             title: 'Sobre Mí',
-            p1: `Hola, soy Manuel y soy un Frontend Web Developer apasionado. También tengo algunos conocimientos con tecnologias Backend, como Firebase, MongoDB, Node.js and Express.`,
-            p2: `Mi objetivo es encontrar trabajo en una empresa que me permita seguir aprendiendo todos los días y crecer en el mundo IT`,
+            p1: `Hola, soy Manuel y soy un Desarrollador Web Frontend apasionado. Me encanta construir interfaces de usuario Responsive, principalmente con CSS y React, que el usuario pueda disfrutar y pueda guiarse fácilmente a lo largo del sitio web. También tengo algunos conocimientos con tecnologías Backend, como Firebase, MongoDB, Node.js y Express.`,
+            p2: 'Mi objetivo es aprender todos los días, encontrando trabajo en una empresa que me permita crecer en el mundo IT y en la que pueda aportar con todos los conocimientos que he aprendido.',
             p3: `Actualmente no tengo más experiencia que un sitio web Fullstack que hice para un cliente, ¡pero estoy seguro de que te gustarán estos increibles proyectos!`
         },
-
         skills: {
             title: 'Habilidades',
             good: 'Buena Experiencia',
