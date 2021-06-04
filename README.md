@@ -1,6 +1,6 @@
 # Personal Portfolio
 
-![Portfolio](https://i.imgur.com/gWO7cIU.png "Portfolio")
+![Portfolio](https://i.imgur.com/Z5JN4tL.png "Portfolio")
 
 _Portfolio personal en donde muestro mis proyectos y mis aptitudes. Utilicé un bonito diseño con animaciones SVG para la sección de "Home", para "Sobre Mi" y "Habilidades" utilicé Canvas API. Los proyectos los muestro en un cómodo Slider 3D. También puedes ponerte en Contacto conmigo a través del formulario._
 

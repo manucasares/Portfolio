@@ -52,7 +52,7 @@ export const Home = () => {
 
                 <h1 className="name"> Manuel Casares Rojas </h1>
 
-                <h2 className="occupation"> Front End Web Developer </h2>
+                <h2 className="occupation"> Fullstack Web Developer </h2>
 
                 <i className="description"> "{ description }" </i>
 
